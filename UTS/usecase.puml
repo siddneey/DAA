@@ -1,0 +1,22 @@
+@startuml usecase
+actor Pengguna
+actor Admin
+
+Pengguna -> (Login)
+Admin -> (Login)
+
+Pengguna -> (Lihat Daftar Kendaraan)
+Pengguna -> (Lihat Detail Kendaraan)
+
+Admin -> (Tambah Kendaraan)
+Admin -> (Ubah Kendaraan)
+Admin -> (Hapus Kendaraan)
+Admin -> (Kelola Data Kendaraan)
+Admin -> (Kelola Data Pemilik)
+
+(Lihat Daftar Kendaraan) --> (Lihat Detail Kendaraan) : lihat detail kendaraan tertentu
+(Tambah Kendaraan) --> (Kelola Data Kendaraan) : admin mengelola data kendaraan
+(Ubah Kendaraan) --> (Kelola Data Kendaraan) : admin mengubah data kendaraan
+(Hapus Kendaraan) --> (Kelola Data Kendaraan) : admin menghapus data kendaraan
+
+@enduml

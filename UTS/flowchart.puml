@@ -1,0 +1,19 @@
+@startuml flowchart
+start
+
+:Login;
+if (Admin?) then (ya)
+  :Dashboard Admin;
+  :Tambah Kendaraan;
+  :Ubah Kendaraan;
+  :Hapus Kendaraan;
+  :Kelola Data Kendaraan;
+  :Kelola Data Pemilik;
+else (tidak)
+  :Dashboard Pengguna;
+  :Lihat Daftar Kendaraan;
+  :Lihat Detail Kendaraan;
+endif
+
+stop
+@enduml
