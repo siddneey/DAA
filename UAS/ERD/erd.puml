@@ -1,0 +1,29 @@
+@startuml
+entity "Pengeluaran" as Pengeluaran {
+  +id_pengeluaran : int
+  +tanggal : date
+  +jumlah : decimal
+  +kategori : string
+  +deskripsi : string
+}
+
+entity "Pemasukan" as Pemasukan {
+  +id_pemasukan : int
+  +tanggal : date
+  +jumlah : decimal
+  +kategori : string
+  +deskripsi : string
+}
+
+entity "Laporan Keuangan" as LaporanKeuangan {
+  +id_laporan : int
+  +periode : string
+  +total_pemasukan : decimal
+  +total_pengeluaran : decimal
+  +saldo_bersih : decimal
+  +profit_persenan : decimal
+}
+
+Pengeluaran -- LaporanKeuangan : "Mencatat"
+Pemasukan -- LaporanKeuangan : "Mencatat"
+@enduml

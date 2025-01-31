@@ -1,0 +1,16 @@
+@startuml
+start
+:Login;
+if (Apakah login berhasil?) then (ya)
+  :Tampilkan menu utama;
+  :Kelola Pengeluaran;
+  :Kelola Pemasukan;
+  :Lihat Laporan Keuangan;
+  :Lihat Saldo Bersih;
+  :Lihat Profit;
+  stop
+else (tidak)
+  :Tampilkan pesan error;
+  stop
+endif
+@enduml

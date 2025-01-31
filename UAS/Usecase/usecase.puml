@@ -1,0 +1,20 @@
+@startuml
+actor "Manajer Keuangan" as Manager
+
+Manager --> (Kelola Pengeluaran)
+Manager --> (Kelola Pemasukan)
+Manager --> (Lihat Laporan Keuangan)
+Manager --> (Lihat Saldo Bersih)
+Manager --> (Lihat Profit Persenan)
+
+(Kelola Pengeluaran) --> (Tambah Pengeluaran)
+(Kelola Pengeluaran) --> (Edit Pengeluaran)
+(Kelola Pengeluaran) --> (Hapus Pengeluaran)
+(Kelola Pemasukan) --> (Tambah Pemasukan)
+(Kelola Pemasukan) --> (Edit Pemasukan)
+(Kelola Pemasukan) --> (Hapus Pemasukan)
+(Lihat Laporan Keuangan) --> (Laporan Pengeluaran)
+(Lihat Laporan Keuangan) --> (Laporan Pemasukan)
+(Lihat Saldo Bersih) --> (Hitung Saldo Bersih)
+(Lihat Profit Persenan) --> (Hitung Profit Persenan)
+@enduml
